@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "autors",
+  "info": {
+    "singularName": "autor",
+    "pluralName": "autors",
+    "displayName": "Autor",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true
+    },
+    "biografia": {
+      "type": "text",
+      "required": true
+    },
+    "livros": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::livro.livro",
+      "mappedBy": "autor"
+    }
+  }
+}
